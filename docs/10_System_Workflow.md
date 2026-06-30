@@ -4,6 +4,7 @@ $$\*$$
 
 --> At_Producer : Batch Registered At_Producer --> In_Transit : Shipment Dispatched In_Transit --> At_Receiver : Shipment Arrived At_Receiver --> At_Retailer : Distributed to Retail At_Retailer --> Sold : Purchased by Consumer
 
+```
 state Safety_Check <<choice>>
 In_Transit --> Safety_Check : Inspection Occurs
 Safety_Check --> In_Transit : PASS
@@ -16,3 +17,5 @@ Quarantined --> At_Receiver : Cleared after Review
 
 Sold --> [*]
 Recalled --> [*]
+
+```
